@@ -8,14 +8,16 @@ import lombok.Data;
 
 /**
  * Description: 
- *	@author G3 3579 at 17-Jul-2025
+ *	@author G3 3579 at 18-Jul-2025
  */
 @Data
-public class BalanceDaoResponse {
-	private String respCode;
-	private String respMsg;
+public class CardDetails {
+	private String cardNumber;
+	private String productType;
+	private String region;
+	private String status;
+	private boolean isPrimary;
 	private long availableBal;
 	private long outstandingAmount;
 	private long totalCreditLimitAmount;
-	
 }

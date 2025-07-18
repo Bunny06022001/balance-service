@@ -4,6 +4,8 @@
  */
 package com.keybank.balance.builder;
 
+import org.springframework.stereotype.Component;
+
 import com.keybank.balance.model.BalanceDaoRequest;
 import com.keybank.balance.model.BalanceRequest;
 import com.keybank.balance.model.FinanceServiceRequest;
@@ -12,6 +14,7 @@ import com.keybank.balance.model.FinanceServiceRequest;
  * Description: 
  *	@author G3 3579 at 18-Jul-2025
  */
+@Component
 public class BalanceRequestBuilder {
 
 	/**

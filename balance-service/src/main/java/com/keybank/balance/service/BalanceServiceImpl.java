@@ -57,9 +57,9 @@ public class BalanceServiceImpl implements IBalanceService {
 		BalanceDaoRequest daoRequest = balanceRequestBuilder.buildDaoRequest(request);
 		//4. Apply business logic to identify whether it is domestic card or International card
 		//5. prepare the call for second Integration layer i.e either domestic db or intl db
-		if("domestic".equals(financeResponse.getRegion())) {
+		if("active".equals(financeResponse.getStatus()) && "US".equals(financeResponse.getRegion())) {
 			balanceDaoResponse = balanceDomesticDao.getBalance(daoRequest);
-		}else if("intl".equals(financeResponse.getRegion())) {
+		}else if("active".equals(financeResponse.getStatus()) && "intl".equals(financeResponse.getRegion())) {
 			balanceDaoResponse = balanceIntlDao.getBalance(daoRequest);
 		}else {
 			//TODO : throw user defined invalid region type exception

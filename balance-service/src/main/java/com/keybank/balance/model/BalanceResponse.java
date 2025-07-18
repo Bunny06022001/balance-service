@@ -4,10 +4,14 @@
  */
 package com.keybank.balance.model;
 
+import lombok.Data;
+
 /**
  * Description: 
  *	@author G3 3579 at 17-Jul-2025
  */
+@Data
 public class BalanceResponse {
-
+	private StatusBlock statusBlock;
+	private CardDetails cardDetails;
 }

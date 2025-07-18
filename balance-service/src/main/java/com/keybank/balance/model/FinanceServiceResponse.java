@@ -17,4 +17,6 @@ public class FinanceServiceResponse {
 	private String cardNumber;
 	private String productType;
 	private String region;
+	private String status;
+	private boolean isPrimary;
 }
