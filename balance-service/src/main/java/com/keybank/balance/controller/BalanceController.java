@@ -39,12 +39,17 @@ public class BalanceController {
 		
 		//1. Get the request from the client
 		BalanceRequest request=new BalanceRequest();
+		request.setCardNumber(cardNumber);
+		request.setChannelId(channelId);
+		request.setClientId(clientId);
+		request.setCorrelationId(correlationId);
+		request.setMessageTs(messageTs);
 		//2. validate the request
 		balanceRequestValidator.validateRequest(request);
 		//3. prepare the call to service layer 
-		
-		
-		return null;
+		BalanceResponse balance = balanceService.getBalance(request);
+
+		return balance;
 		
 	}
 

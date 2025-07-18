@@ -4,10 +4,17 @@
  */
 package com.keybank.balance.model;
 
+import lombok.Data;
+
 /**
  * Description: 
  *	@author G3 3579 at 17-Jul-2025
  */
-public class FinanceServiceResponse {
 
+@Data
+public class FinanceServiceResponse {
+	
+	private String cardNumber;
+	private String productType;
+	private String region;
 }
