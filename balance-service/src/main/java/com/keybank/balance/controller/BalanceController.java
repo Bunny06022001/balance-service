@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.keybank.balance.exception.BalanceRequestInvalidException;
 import com.keybank.balance.model.BalanceRequest;
 import com.keybank.balance.model.BalanceResponse;
 import com.keybank.balance.service.IBalanceService;
@@ -34,7 +35,7 @@ public class BalanceController {
 			                          @RequestHeader("x-client-id") String clientId,
 			                          @RequestHeader("x-channel-id") String channelId,
 			                          @RequestHeader("x-correlation-id") String correlationId,
-			                          @RequestHeader("x-message-ts") String messageTs) {
+			                          @RequestHeader("x-message-ts") String messageTs) throws BalanceRequestInvalidException {
 		
 		
 		//1. Get the request from the client
